@@ -1,6 +1,9 @@
-var angular = require('angular');
-var app = angular.module('testApp', []);
+import * as angular from 'angular';
 
-import MainCtrl from './mainCtrl';
+export const app = angular.module('app',[]);
 
-app.controller('mainCtrl', MainCtrl);
+require ('./components/app.module.ts');
+
+angular.element(document).ready( ()=> {
+    angular.bootstrap(document, ['app']);
+});
